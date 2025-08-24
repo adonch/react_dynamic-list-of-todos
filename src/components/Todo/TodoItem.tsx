@@ -15,7 +15,7 @@ export const TodoItem: React.FC<Props> = ({
   const isModalOpen = selectedTodo?.id === todo.id;
 
   return (
-    <tr data-cy="todo" key={todo.id}>
+    <tr data-cy="todo">
       <td className="is-vcentered">{todo.id}</td>
       <td className="is-vcentered">
         {todo.completed && (

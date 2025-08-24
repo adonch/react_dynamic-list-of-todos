@@ -8,14 +8,12 @@ import { Loader } from './components/Loader';
 import { getTodos } from './api';
 import { Todo } from './types/Todo';
 import { TodoModal } from './components/TodoModal';
-
+type StatusFilter = 'all' | 'active' | 'completed';
 export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const [statusFilter, setStatusFilter] = useState<
-  'all' | 'active' | 'completed'
-  >('all');
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [queryFilter, setQueryFilter] = useState('');
   const [selectedTodo, setSelectedTodo] = useState<Todo | null>(null);
 
